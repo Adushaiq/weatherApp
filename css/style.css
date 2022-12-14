@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins',sans-serif;
+  background-color: #00FFA3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+}
+
+body .container {
+  width: 400px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+body header {
+  font-size: 22px;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-bottom: 1px solid #bfbfbf;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body header i {
+  font-size: 0;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+body .container.active header i {
+  font-size: 32px;
+  margin-left: 5px;
+}
+
+body .inputSection {
+  margin: 20px;
+  text-align: center;
+}
+
+body .inputSection .infoTxt {
+  display: none;
+  padding: 15px 10px;
+  font-size: 17px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+body .inputSection .infoTxt.error {
+  display: block;
+  color: #721c24;
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
+}
+
+body .inputSection .infoTxt.pending {
+  display: block;
+  color: #0c5460;
+  background: #d1ecf1;
+  border: 1px solid #bee5eb;
+}
+
+body .inputSection .inputBox {
+  width: 362px;
+  height: 58px;
+  background-color: #F1F1F1;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+body .inputSection .separator {
+  height: 1px;
+  width: 100%;
+  margin: 28px 0;
+  background: #ccc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .inputSection .separator::before {
+  content: "or";
+  font-size: 20px;
+  padding: 0 15px;
+  color: #ccc;
+  background: white;
+}
+
+body .inputSection button {
+  width: 362px;
+  height: 58px;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #00FFA3;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+body .container.active .inputSection {
+  display: none;
+}
+
+body .weatherSection {
+  margin: 30px 0 0;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .weatherSection img {
+  max-width: 125px;
+}
+
+body .weatherSection .temp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 72px;
+  font-weight: 500;
+}
+
+body .weatherSection .temp .numb {
+  font-weight: 500;
+}
+
+body .weatherSection .temp .deg {
+  font-size: 40px;
+  margin: 10px 5px 0 0;
+  display: block;
+}
+
+body .weatherSection .weather {
+  font-size: 21px;
+  text-align: center;
+  margin: -5px 20px 15px;
+}
+
+body .weatherSection .location {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 21px;
+  margin-bottom: 30px;
+}
+
+body .weatherSection .location i {
+  font-size: 22px;
+  margin-right: 5px;
+}
+
+body .weatherSection .bottomDetails {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .weatherSection .bottomDetails .column {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 15px 0;
+}
+
+body .weatherSection .bottomDetails .column i {
+  color: #00FFA3;
+  font-size: 40px;
+}
+
+body .weatherSection .bottomDetails .column .humidity {
+  border-left: 1px solid #bfbfbf;
+}
+
+body .weatherSection .bottomDetails .details p {
+  font-size: 14px;
+  margin-top: -6px;
+}
+
+body .weatherSection .bottomDetails .details .temp, body .weatherSection .bottomDetails .humidity span {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: -3px;
+}
+
+body .weatherSection .bottomDetails .details .temp, body .weatherSection .bottomDetails .deg {
+  margin: 0;
+  font-size: 17px;
+  padding: 0 2px 0 1px;
+}
+
+body .container.active .weatherSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (orientation: portrait) {
+  body .container {
+    width: 320px;
+  }
+  body .inputSection .inputBox {
+    width: 280px;
+  }
+  body .inputSection button {
+    width: 280px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

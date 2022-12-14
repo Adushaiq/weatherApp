@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins',sans-serif;
+    background-color: #00FFA3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    
+    
+    .container {
+
+        width: 400px;
+        background-color: white;
+        border-radius: 10px;
+    }
+
+    // Header Section
+
+    header{
+        font-size: 22px;
+        font-weight: bold;
+        padding: 10px 15px;
+        border-bottom: 1px solid #bfbfbf;
+        display: flex;
+        align-items: center;
+
+        i {
+            font-size: 0;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+    }
+
+    .container.active header i{
+        font-size: 32px;
+        margin-left: 5px;
+    }
+
+    //Input Section
+
+    .inputSection{
+     
+        margin: 20px;
+        text-align: center;
+
+        .infoTxt {
+            display: none;
+            padding: 15px 10px;
+            font-size: 17px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .infoTxt.error {
+            display: block;
+            color: #721c24;
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;    
+        }
+        .infoTxt.pending {
+            display: block;
+            color: #0c5460;
+            background: #d1ecf1;
+            border: 1px solid #bee5eb;    
+        }
+        .inputBox {
+            width: 362px;
+            height: 58px;   
+            background-color:  #F1F1F1 ;
+            border: none;
+            border-radius: 10px;
+            padding: 10px;
+            font-size: 15px;
+        }
+
+
+        .separator {
+            height: 1px;
+            width: 100%;
+            margin: 28px 0;
+            background: #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .separator::before {
+            content: "or";
+            font-size: 20px;
+            padding: 0 15px;
+            color: #ccc;
+            background: white;
+        }
+
+        button {
+            width: 362px;
+            height: 58px;
+            border: none;   
+            border-radius: 10px;
+            text-align: center;
+            background-color: #00FFA3;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+    }
+
+    .container.active .inputSection {
+        display: none;
+    }
+
+    .weatherSection {
+        margin: 30px 0 0;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        img{
+            max-width: 125px;
+        }
+
+        .temp {
+            display: flex;
+            font-size: 72px;
+            font-weight: 500;
+            
+            .numb {
+                font-weight: 500;
+            }
+
+            .deg {
+                font-size: 40px;
+                margin: 10px 5px 0 0;
+                display: block;
+            }
+        }
+
+        .weather {
+            font-size: 21px;
+            text-align: center;
+            margin: -5px 20px 15px;
+        }
+
+        .location {
+            display: flex;
+            align-items: center;
+            font-size: 21px;
+            margin-bottom: 30px;
+        
+            i {
+                font-size: 22px;
+                margin-right: 5px;
+            }
+        }
+
+        .bottomDetails {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        
+            .column {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 15px 0;
+
+                i {
+                    color: #00FFA3;
+                    font-size: 40px;
+                }
+
+                .humidity {
+                    border-left: 1px solid #bfbfbf;
+                }
+            }
+
+            .details {
+
+                p {
+                    font-size: 14px;
+                    margin-top: -6px;
+                }
+            }
+
+            .details .temp, .humidity span{
+                font-size: 18px;
+                font-weight: 500;
+                margin-top: -3px;
+            }
+
+            .details .temp, .deg{
+                margin: 0;
+                font-size: 17px;
+                padding: 0 2px 0 1px;
+            }
+        }
+    }
+
+    .container.active .weatherSection {
+        display: flex;
+    }
+}
+
+
+@media (orientation: portrait) {
+    body{       
+        .container{
+            width: 320px;
+        }
+        .inputSection{
+            .inputBox{
+                width: 280px;
+            }
+            button {
+                width: 280px;
+            }
+        }
+    }
+}
