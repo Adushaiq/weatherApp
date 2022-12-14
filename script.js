@@ -69,22 +69,22 @@ function weatherDetails(info) {
         // updating the weather icon
 
         if (id == 800){
-            wIcon.src = "images/clear.svg";
+            wIcon.src = "Images/clear.svg";
         }
         else if (id >=200 && id <= 232){
-            wIcon.src = "images/storm.svg";
+            wIcon.src = "Images/storm.svg";
         }
         else if (id >=600 && id <= 622){
-            wIcon.src = "images/snow.svg";
+            wIcon.src = "Images/snow.svg";
         }
         else if (id >=701 && id <= 781){
-            wIcon.src = "images/haze.svg";
+            wIcon.src = "Images/haze.svg";
         }
         else if (id >=801 && id <= 804){
-            wIcon.src = "images/cloud.svg";
+            wIcon.src = "Images/cloud.svg";
         }
         else if ((id >=300 && id <= 321) || (id >=500 && id <=531)){
-            wIcon.src = "images/rain.svg";
+            wIcon.src = "Images/rain.svg";
         }
 
         infoTxt.classList.remove("pending", "error");
